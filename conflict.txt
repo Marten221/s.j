@@ -1,3 +1,7 @@
 aias sadas saia
+<<<<<<< HEAD
 blablablaaaaa
 ll
+=======
+ssdkjghefhf
+>>>>>>> f435917af8bb24fbc70498f1d0ed7f2577e5264f
