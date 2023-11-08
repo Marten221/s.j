@@ -8,25 +8,58 @@
 
 <h1>Marie ilutuba</h1>
 <div class="button-container">
-    <button class="button">HINNAKIRI</button>
-    <button class="button">BRONEERI AEG</button>
-    <button class="round-button">IG</button>
-    <button class="round-button">FB</button>
-    <button class="round-button">T</button>
+    <button class="button" onclick="window.location.href='hinnakiri.html'" >HINNAKIRI</button>
+    <button class="button" onclick="window.location.href=''">BRONEERI AEG</button>
+    <button class="round-button" onclick="window.location.href='https://www.instagram.com'">IG</button>
+    <button class="round-button" onclick="window.location.href='https://www.fb.com'">FB</button>
+    <button class="round-button" onclick="window.location.href='https://www.tumblr.com'">T</button>
 </div>
+<div style="margin-top: 50px;"></div>
 
-<div class="slider">
-    <div class="slide">
-        <img src="lsblk.png" alt="Pilt 1">
-    </div>
-    <div class="slide">
-        <img src="lvdisplay.png" alt="Pilt 2">
-    </div>
-    <div class="slide">
-        <img src="df -h.png" alt="Pilt 3">
-    </div>
-</div>
-    <script src="script.js"></script>
+<div class="slideshow-container">
 
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="pilt1.jpg" style="width:100%">
+      <div class="text">Miku</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="pilt2.jpg" style="width:100%">
+      <div class="text">Skipi</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="pilt3.jpg" style="width:100%">
+      <div class="text">Pika</div>
+    </div>
+    
+    </div>
+    <br>
+
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+    
 </body>
 </html>
